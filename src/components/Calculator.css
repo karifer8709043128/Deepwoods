@@ -1,0 +1,208 @@
+/* Calculator Container */
+.calculator-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 128, 0, 0.1);
+    border: 1px solid rgba(0, 128, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .calculator-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .calculator-icon {
+    font-size: 1.75rem;
+  }
+  
+  /* Distance Control */
+  .distance-control {
+    margin-bottom: 1.5rem;
+  }
+  
+  .distance-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .distance-header label {
+    font-weight: 500;
+    color: #424242;
+  }
+  
+  .distance-value {
+    font-weight: 600;
+    color: #2e7d32;
+  }
+  
+  .distance-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #e0e0e0;
+    outline: none;
+    margin: 1rem 0;
+  }
+  
+  .distance-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2e7d32;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .distance-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2e7d32;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .distance-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #757575;
+    margin-top: -0.5rem;
+  }
+  
+  /* Vehicle Selection */
+  .vehicle-selection {
+    margin-bottom: 1.5rem;
+  }
+  
+  .vehicle-selection label {
+    display: block;
+    font-weight: 500;
+    color: #424242;
+    margin-bottom: 0.75rem;
+  }
+  
+  .vehicle-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .vehicle-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e0e0e0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .vehicle-option:hover {
+    border-color: #81c784;
+    transform: translateY(-2px);
+  }
+  
+  .vehicle-option.selected {
+    background: #e8f5e9;
+    border-color: #66bb6a;
+    box-shadow: 0 4px 8px rgba(102, 187, 106, 0.2);
+  }
+  
+  .vehicle-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .vehicle-name {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #424242;
+  }
+  
+  /* Calculate Button */
+  .calculate-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #43a047, #2e7d32);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(67, 160, 71, 0.3);
+  }
+  
+  .calculate-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(67, 160, 71, 0.4);
+  }
+  
+  .calculate-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Impact Fact */
+  .impact-fact {
+    background: #e3f2fd;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    border-left: 4px solid #42a5f5;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .impact-fact h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #1565c0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .impact-fact p {
+    color: #424242;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .fact-icon {
+    font-size: 1.25rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .calculator-container {
+      padding: 1.5rem;
+    }
+    
+    .vehicle-options {
+      grid-template-columns: 1fr;
+    }
+  }
